@@ -53,6 +53,7 @@
 @media screen and (min-width: 1200px) {
   .regular {
     flex-wrap: nowrap;
+    flex-direction: row;
   }
   .regular__list {
     width: 170px;
