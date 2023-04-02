@@ -98,25 +98,29 @@
     <!-- Header -->
     <header class="header">
       <div class="container">
-        <nav class="header-navigation">
-          <ul class="unstyled-list header-list">
-            <li>
-              <a class="header-list__studio-logo" href="./index.html"
-                ><span class="header-list__colorlogo">Web</span>Studio</a
-              >
-            </li>
-            <li>
-              <a
-                class="header-list__link header-list__studio"
-                href="./index.html"
-                >Studio</a
-              >
-            </li>
-            <li>
-              <a class="header-list__link" href="./portfolio.html">Portfolio</a>
-            </li>
-            <li><a class="header-list__link" href="#">Contacts</a></li>
-          </ul>
+        <div class="header-container">
+          <nav class="header-navigation">
+            <ul class="unstyled-list header-list">
+              <li>
+                <a class="header-list__studio-logo" href="./index.html"
+                  ><span class="header-list__colorlogo">Web</span>Studio</a
+                >
+              </li>
+              <li>
+                <a
+                  class="header-list__link header-list__studio"
+                  href="./index.html"
+                  >Studio</a
+                >
+              </li>
+              <li>
+                <a class="header-list__link" href="./portfolio.html"
+                  >Portfolio</a
+                >
+              </li>
+              <li><a class="header-list__link" href="#">Contacts</a></li>
+            </ul>
+          </nav>
           <ul class="unstyled-list contact-list">
             <li>
               <a class="contact-list__mail" href="mailto:info@devstudio.com">
@@ -137,7 +141,7 @@
               >
             </li>
           </ul>
-        </nav>
+        </div>
       </div>
     </header>
     <!-- Main section  -->
@@ -268,11 +272,33 @@
           <h2 class="center-title">Our Team</h2>
           <ul class="team-section__img unstyled-list">
             <li class="team">
-              <img
-                class="team__img"
-                src="./images/christopher.jpg"
-                alt="A man with a red shirt."
-              />
+              <picture>
+                <source
+                  media="screen and (max-width: 480px)"
+                  srcset="images\christopher-M-@2x.jpg 2x"
+                />
+                <source
+                  media="screen and (min-width: 768px)"
+                  srcset="
+                    images\christopher-D.jpg     1x,
+                    images\christopher-D-@2x.jpg 2x
+                  "
+                />
+                <source
+                  media="screen and (min-width: 1200px)"
+                  srcset="
+                    images\christopher.jpg       1x,
+                    images\christopher-P-@2x.jpg 2x
+                  "
+                />
+                <img
+                  class="team-member-picture"
+                  width="450"
+                  height="460"
+                  src="images\christopher-M.jpg"
+                  alt="Christopher"
+                />
+              </picture>
               <h3 class="team__name">Christopher Walker</h3>
               <p class="team__job">Product Designer</p>
               <!-- Icons - workers -->
@@ -316,11 +342,27 @@
               </ul>
             </li>
             <li class="team">
-              <img
-                class="team__img"
-                src="./images/kylie.jpg"
-                alt="A woman with blonde hair."
-              />
+              <picture>
+                <source
+                  media="screen and (max-width: 480px)"
+                  srcset="images\kylie-M.jpg 1x, images/kylie-M-@2x.jpg 2x"
+                />
+                <source
+                  media="screen and (min-width: 768px)"
+                  srcset="images\kylie-D.jpg 1x, images/kylie-D-@2x.jpg 2x"
+                />
+                <source
+                  media="screen and (min-width: 1200px)"
+                  srcset="images\kylie.jpg 1x, images/kylie-P-@2x.jpg 2x"
+                />
+                <img
+                  class="team-member-picture"
+                  width="450"
+                  height="460"
+                  src="images\kylie-M.jpg"
+                  alt="Kylie"
+                />
+              </picture>
               <h3 class="team__name">Kylie Evans</h3>
               <p class="team__job">Frontend Developer</p>
               <!-- Icons - workers -->
@@ -364,11 +406,27 @@
               </ul>
             </li>
             <li class="team">
-              <img
-                class="team__img"
-                src="./images/ryan.jpg"
-                alt="A man with a blue shirt."
-              />
+              <picture>
+                <source
+                  media="screen and (max-width: 480px)"
+                  srcset="images\ryan-M.jpg 1x, images/ryan-M-@2x.jpg 2x"
+                />
+                <source
+                  media="screen and (min-width: 768px)"
+                  srcset="images\ryan-D.jpg 1x, images/ryan-D-@2x.jpg 2x"
+                />
+                <source
+                  media="screen and (min-width: 1200px)"
+                  srcset="images\ryan.jpg 1x, images/ryan-P-@2x.jpg 2x"
+                />
+                <img
+                  class="team-member-picture"
+                  width="450"
+                  height="460"
+                  src="images\ryan-M.jpg"
+                  alt="Kylie"
+                />
+              </picture>
               <h3 class="team__name">Ryan Harris</h3>
               <p class="team__job">Marketing</p>
               <!-- Icons - workers -->
@@ -412,11 +470,21 @@
               </ul>
             </li>
             <li class="team">
-              <img
-                class="team__img"
-                src="./images/tyler.jpg"
-                alt="A man with a black t-shirt."
-              />
+              <picture>
+                <source
+                  media="screen and (max-width: 480px)"
+                  srcset="images\tyler-M.jpg 1x, images/tyler-M-@2x.jpg 2x"
+                />
+                <source
+                  media="screen and (min-width: 768px)"
+                  srcset="images\tyler-D.jpg 1x, images/tyler-D-@2x.jpg 2x"
+                />
+                <source
+                  media="screen and (min-width: 1200px)"
+                  srcset="images\tyler.jpg 1x, images/tyler-P-@2x.jpg 2x"
+                />
+                <img class="team__img" src="images\tyler-M.jpg" alt="Kylie" />
+              </picture>
               <h3 class="team__name">Tyler Moore</h3>
               <p class="team__job">UI Designer</p>
               <!-- Icons - workers -->
