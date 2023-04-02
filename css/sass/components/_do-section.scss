@@ -40,3 +40,9 @@
   padding: 0px 0px 50px 0px;
   font-weight: bold;
 }
+
+@media screen and (max-width: 1200px) {
+  .do-section {
+    display: none;
+  }
+}

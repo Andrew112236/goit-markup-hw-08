@@ -8,7 +8,9 @@
 .regular {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 30px;
+  flex-wrap: wrap;
 
   &__svg {
     fill: #afb1b8;
@@ -36,5 +38,23 @@
       transition: $transition;
       transition-duration: 250ms;
     }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .regular {
+    flex-wrap: wrap;
+  }
+  .regular__list {
+    width: 226px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .regular {
+    flex-wrap: nowrap;
+  }
+  .regular__list {
+    width: 170px;
   }
 }

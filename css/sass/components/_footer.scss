@@ -2,18 +2,22 @@
 
 .contact {
   padding-top: 60px;
-  min-height: 151px;
   background: $color1;
 
   .concentration {
     display: flex;
-    gap: 94px;
+    gap: 60px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   &-wrapper {
     &__credentials {
       display: flex;
       flex-direction: column;
+      align-items: center;
 
       &--color {
         color: $secondarycolor;
@@ -22,8 +26,9 @@
       ul {
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 12px;
-        padding: 28px 0px 60px 0px;
+        padding: 28px 0px 0px 0px;
 
         .adress {
           font-style: normal;
@@ -46,11 +51,12 @@
       line-height: 1.143px;
       text-transform: uppercase;
       color: $primarycolor;
+      text-align: center;
     }
 
     &__icons {
       display: flex;
-      flex-direction: co;
+      flex-direction: row;
       align-items: center;
       margin: 30px 0px 0px 0px;
       gap: 10px;
@@ -95,16 +101,19 @@
       font-size: 14px;
       line-height: 1.143px;
       text-transform: uppercase;
+      text-align: center;
 
       color: $primarycolor;
     }
 
     &-form {
       display: flex;
-      gap: 12px;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
 
       &__mail {
-        width: 358px;
+        width: 450px;
         height: 50px;
         border: 1px solid rgba(255, 255, 255, 0.3);
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -139,5 +148,56 @@
         }
       }
     }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contact {
+    .concentration {
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      .contact-wrapper__social {
+        padding: 0px 0px 0px 100px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contact {
+    .concentration {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: center;
+      gap: 94px;
+      padding: 0px 0px 60px 0px;
+      .contact-wrapper__social {
+        padding: 0px 0px 0px 0px;
+      }
+    }
+  }
+
+  .contact-wrapper__credentials {
+    align-items: flex-start;
+    ul {
+      display: flex;
+      align-items: flex-start;
+    }
+  }
+
+  .contact-wrapper__newsletter {
+    text-align: start;
+  }
+
+  .contact-wrapper-form {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .contact-wrapper__subscribe {
+    padding: 7px 0px 0px 0px;
   }
 }

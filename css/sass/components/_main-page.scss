@@ -1,33 +1,81 @@
 @import "../utils/vars";
 
 .main-page {
-  background-repeat: no-repeat;
+  min-width: 480px;
+  height: 480px;
   background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../background.jpg), no-repeat;
+    url("/images/background-M-480.jpg");
   background-position: 50% 50%;
-  background-size: cover;
   background-color: $color1;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+// Scalling background image
+
+@media screen and (min-width: 768px) {
+  .main-page {
+    background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url("/images/background-D-768.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main-page {
+    background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url("/images/background.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .main-page {
+    background-image: url("/images/background-M-@2x.jpg");
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2),
+  screen and (min-width: 768px) and (min-resolution: 192dpi),
+  screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .main-page {
+    background-image: url("/images/background-D-@2x.jpg");
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2),
+  screen and (min-width: 1200px) and (min-resolution: 192dpi),
+  screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .main-page {
+    background-image: url("/images/background-P-@2x.jpg");
+  }
 }
 
 .main-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 
   &__title {
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
-    width: 696px;
+    font-size: 26px;
+    line-height: 1.615;
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+    margin: 160px 0px 30px 0px;
     color: $primarycolor;
-    margin: 200px 0px 30px 0px;
   }
 
   &__btn {
-    font-weight: 700;
+    font-weight: 900;
     font-size: 16px;
     line-height: 1.875;
     letter-spacing: 0.06em;
@@ -46,6 +94,24 @@
       background: $secondarycolor;
       border-radius: 4px;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main-container {
+    &__title {
+      font-size: 26px;
+      line-height: 1.615;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main-container {
+    &__title {
+      font-size: 44px;
+      line-height: 1.363;
     }
   }
 }
