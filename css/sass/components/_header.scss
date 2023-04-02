@@ -1,0 +1,109 @@
+@import "../utils/vars";
+
+.header {
+  min-height: 80px;
+  background-color: $primarycolor;
+  border: 1px solid $color2;
+
+  .header-navigation {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    position: relative;
+  }
+
+  .header-list {
+    display: flex;
+    align-items: center;
+    padding: 32px 0px 32px 0px;
+    gap: 50px;
+    flex-grow: 1;
+    font-family: $font-family1;
+
+    &__colorlogo {
+      color: $secondarycolor;
+    }
+
+    &__studio {
+      &:after {
+        content: "";
+        border: 2px solid $secondarycolor;
+        width: 100%;
+        position: absolute;
+        bottom: -39px;
+        border-radius: 4px;
+        visibility: visible;
+        left: 0;
+      }
+    }
+
+    &__link {
+      color: $color6;
+      text-decoration: none;
+      font-weight: bold;
+      letter-spacing: 0.02em;
+      position: relative;
+
+      &:hover {
+        color: $secondarycolor;
+        transition: $transition;
+        transition-duration: 250ms;
+      }
+
+      &:focus {
+        color: $secondarycolor;
+        transition: $transition;
+        transition-duration: 250ms;
+      }
+    }
+
+    .header-list__studio-logo {
+      padding: 24px 0px 25px 0px;
+      margin: 0px 53px 0px 0px;
+    }
+  }
+
+  .unstyled-list {
+    list-style: none;
+  }
+
+  .contact-list {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+
+    &__mail:hover {
+      color: $secondarycolor;
+      transition: $transition;
+      transition-duration: 250ms;
+      fill: $secondarycolor;
+    }
+
+    &__mail:focus {
+      color: $secondarycolor;
+      transition: $transition;
+      transition-duration: 250ms;
+      fill: $secondarycolor;
+    }
+
+    &__phone:hover {
+      color: $secondarycolor;
+      transition: $transition;
+      transition-duration: 250ms;
+      fill: $secondarycolor;
+    }
+
+    &__phone:focus {
+      color: $secondarycolor;
+      transition: $transition;
+      transition-duration: 250ms;
+      fill: $secondarycolor;
+    }
+
+    .contact-svg {
+      margin-right: 10px;
+    }
+  }
+}
